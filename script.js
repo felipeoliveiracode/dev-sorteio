@@ -1,24 +1,5 @@
-// const btnRaffle = document.querySelector(".btn-raffle");
-
-// function randomNumber() {
-//     const inputs = document.querySelector(".inputs");
-//     const title = document.querySelector(".title");
-//     const numberResult = document.querySelector(".number-result");
-//     const min = Math.ceil(document.querySelector(".min").value);
-//     const max = Math.floor(document.querySelector(".max").value);
-
-//     const result = Math.floor(Math.random() * (max - min) + min);
-
-//     inputs.style.display = "none";
-//     title.innerHTML = "O número sorteado foi:";
-//     numberResult.innerHTML = result;
-
-// }
-
-// btnRaffle.addEventListener("click", randomNumber);
-
-
 const btnRaffle = document.querySelector(".btn-raffle");
+const btnReturn = document.querySelector(".return");
 const loadingSpinner = document.querySelector(".loading-spinner");
 
 function randomNumber() {
@@ -46,7 +27,12 @@ function randomNumber() {
         loadingSpinner.style.display = "none";
         title.innerHTML = "O número sorteado foi:";
         numberResult.innerHTML = result;
+        btnReturn.style.display = "block";
     }, 2000); // Tempo de carregamento (2 segundos)
 }
 
 btnRaffle.addEventListener("click", randomNumber);
+btnReturn.addEventListener("click", () => {
+    location.reload();
+}
+);
