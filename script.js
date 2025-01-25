@@ -14,7 +14,7 @@ function randomNumber() {
         return;
     }
 
-    // Exibe o spinner
+    // Exibe o spinner 
     loadingSpinner.style.display = "block";
     inputs.style.display = "none";
     title.innerHTML = "Sorteando...";
